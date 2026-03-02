@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIKAS GOWDA B R | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+    cursor:none;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* ===== VERY SLOW ANIMATED BACKGROUND BLOBS ===== */
+.blob{
+    position:fixed;
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    filter:blur(140px);
+    opacity:0.55;
+    z-index:-1;
+    animation: float 60s ease-in-out infinite alternate;
+}
+
+.blob1{background:#7c3aed; top:-200px; left:-200px;}
+.blob2{background:#0ea5e9; bottom:-200px; right:-200px; animation-delay:10s;}
+.blob3{background:#9333ea; top:50%; left:55%; animation-delay:20s;}
+
+@keyframes float{
+    0%{ transform:translate(0px,0px) scale(1); }
+    50%{ transform:translate(60px,-50px) scale(1.08); }
+    100%{ transform:translate(-50px,60px) scale(0.95); }
+}
+
+/* ===== CURSOR ===== */
+.cursor{
+    width:10px;
+    height:10px;
+    background:white;
+    border-radius:50%;
+    position:fixed;
+    pointer-events:none;
+    z-index:9999;
+}
+
+.cursor-follower{
+    width:35px;
+    height:35px;
+    border:2px solid white;
+    border-radius:50%;
+    position:fixed;
+    pointer-events:none;
+    z-index:9998;
+    transition:0.15s ease-out;
+}
+
+/* ===== LAYOUT ===== */
+.container{
+    width:90%;
+    margin:auto;
+    padding:120px 0;
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:64px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+/* ===== PROFILE SECTION ===== */
+.profile{
+    margin-top:80px;
+    text-align:center;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:20px;
+    color:#e2e8f0;
+    line-height:1.6;
+}
+
+/* ===== BUTTONS ===== */
+.buttons{
+    margin-top:40px;
+    text-align:center;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    margin:8px;
+    border:2px solid white;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    background:white;
+    color:black;
+}
+
+/* ===== SECTIONS ===== */
+.section{
+    margin-top:140px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:50px;
+}
+
+/* ===== GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* ===== CARDS ===== */
+.card{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(20px);
+    padding:30px;
+    border-radius:20px;
+    position:relative;
+    overflow:hidden;
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* ===== HOVER PREVIEW ===== */
+.preview{
+    position:absolute;
+    inset:0;
+    background:white;
+    color:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    transform:translateY(100%);
+    transition:0.4s ease;
+    border-radius:20px;
+}
+
+.card:hover .preview{
+    transform:translateY(0%);
+}
+
+/* ===== CERTIFICATES ===== */
+details{
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:15px;
+    margin:15px auto;
+    max-width:900px;
+}
+
+summary{
+    font-weight:600;
+    cursor:pointer;
+}
+
+a{
+    color:#93c5fd;
+    text-decoration:none;
+}
+
+footer{
+    text-align:center;
+    margin-top:140px;
+    padding-bottom:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<div class="container">
+
+<section class="hero">
+    <h1>VIKAS GOWDA B R</h1>
+</section>
+
+<section class="profile">
+    Computer Science (AI/ML) undergraduate focused on building intelligent systems 
+    and extracting meaningful insights from data. As a fresher, I am committed to 
+    continuous learning, adaptability, and practical problem solving.
+</section>
+
+<div class="buttons">
+    <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
+    <a href="https://github.com/vikasgowdabr-stack" target="_blank" class="btn">GitHub</a>
+    <a href="https://www.linkedin.com/in/vikasgowdabr5b4436361" target="_blank" class="btn">LinkedIn</a>
+</div>
+
+<section class="section">
+<h2>Education</h2>
+<div class="grid">
+<div class="card">
+B.E. Computer Science (AI/ML)
+<div class="preview">2023–2026 | GMIT | CGPA: 7.0</div>
+</div>
+<div class="card">
+Diploma in Electronics & Communication Engineering
+<div class="preview">2020–2023 | BET Polytechnic | 69%</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card">Programming<div class="preview">Python, MySQL, MS SQL</div></div>
+<div class="card">Visualization<div class="preview">Power BI, Tableau</div></div>
+<div class="card">Database<div class="preview">MongoDB</div></div>
+<div class="card">Technologies<div class="preview">Machine Learning, AI, Data Analytics, NLP</div></div>
+<div class="card">Tools<div class="preview">Git, GitHub, Visual Studio, Android Studio</div></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card">
+Next Word Prediction using LSTM
+<div class="preview">LSTM-based NLP model for sequential text prediction.</div>
+</div>
+<div class="card">
+AI Virtual Assistant for Students
+<div class="preview">Voice-enabled assistant using NLP & Knowledge Graph.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Experience</h2>
+<div class="grid">
+<div class="card">
+Data Analytics Intern – Dyashin Techno Soft Pvt Ltd
+<div class="preview">
+Worked on SQL queries, data cleaning, Power BI dashboards,
+and generating structured business insights.
+</div>
+</div>
+<div class="card">
+Telecom Technology Intern – RTTC Mysuru
+<div class="preview">
+Exposure to telecom systems, communication protocols,
+and emerging network technologies.
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Certifications</h2>
+
+<details>
+<summary>HP LIFE – Data Science & Analytics (2024)</summary>
+<p><a href="PASTE-LINK" target="_blank">View Certificate</a></p>
+</details>
+
+<details>
+<summary>Infosys – Introduction to Artificial Intelligence (2024)</summary>
+<p><a href="PASTE-LINK" target="_blank">View Certificate</a></p>
+</details>
+
+<details>
+<summary>Infosys – Programming Fundamentals using Python (2024)</summary>
+<p><a href="PASTE-LINK" target="_blank">View Certificate</a></p>
+</details>
+
+<details>
+<summary>Data Analytics Internship – Dyashin Techno Soft Pvt Ltd (2026)</summary>
+<p><a href="PASTE-LINK" target="_blank">View Certificate</a></p>
+</details>
+
+</section>
+
+<footer>
+© 2026 VIKAS GOWDA B R
+</footer>
+
+</div>
+
+<script>
+const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower");
+
+document.addEventListener("mousemove", e=>{
+cursor.style.left = e.clientX+"px";
+cursor.style.top = e.clientY+"px";
+follower.style.left = e.clientX-12+"px";
+follower.style.top = e.clientY-12+"px";
+});
+</script>
+
+</body>
+</html>
